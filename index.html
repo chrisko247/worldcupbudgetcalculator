@@ -57,15 +57,22 @@ Select Your Country
 Choose where you are traveling from to estimate your World Cup travel budget.
 </p>
 
-<input 
+<div class="max-w-md mx-auto">
+
+<input
 id="countrySearch"
 type="text"
 placeholder="Search your country..."
-class="border p-3 rounded w-72"
+class="w-full border border-gray-300 p-4 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
 oninput="filterCountries()"
 />
 
-<div id="countryResults" class="bg-white border
+<div
+id="countryResults"
+class="bg-white border border-gray-200 rounded-lg mt-2 shadow-md max-h-60 overflow-y-auto">
+</div>
+
+</div>
 
 <option value="">Select your country</option>
 <option value="USA">United States</option>
@@ -226,15 +233,37 @@ window.location.href = "country.html?c=" + country;
 <script>
 
 const countries = [
-"United States","United Kingdom","Canada","Nigeria","Germany","France",
-"Brazil","Australia","India","Spain","Italy","Argentina","Mexico",
-"Netherlands","Belgium","Sweden","Norway","Denmark","Switzerland",
-"South Africa","Egypt","Japan","South Korea","China","Indonesia",
-"Philippines","Thailand","Malaysia","Singapore","Chile","Colombia",
-"Peru","Venezuela","Poland","Portugal","Greece","Turkey",
-"Saudi Arabia","United Arab Emirates","Pakistan","Bangladesh",
-"Vietnam","New Zealand","Ireland","Austria","Hungary",
-"Czech Republic","Romania","Ukraine","Finland","Iceland"
+
+"Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia",
+"Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh",
+"Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia",
+"Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria",
+"Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde",
+"Central African Republic","Chad","Chile","China","Colombia","Comoros",
+"Congo","Costa Rica","Croatia","Cuba","Cyprus","Czech Republic",
+"Denmark","Djibouti","Dominican Republic","Ecuador","Egypt",
+"El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini",
+"Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia",
+"Germany","Ghana","Greece","Guatemala","Guinea","Guyana","Haiti",
+"Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq",
+"Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan",
+"Kenya","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho",
+"Liberia","Libya","Lithuania","Luxembourg","Madagascar","Malawi",
+"Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius",
+"Mexico","Moldova","Mongolia","Montenegro","Morocco","Mozambique",
+"Myanmar","Namibia","Nepal","Netherlands","New Zealand","Nicaragua",
+"Niger","Nigeria","North Korea","North Macedonia","Norway","Oman",
+"Pakistan","Panama","Papua New Guinea","Paraguay","Peru",
+"Philippines","Poland","Portugal","Qatar","Romania","Russia",
+"Rwanda","Saudi Arabia","Senegal","Serbia","Sierra Leone",
+"Singapore","Slovakia","Slovenia","Somalia","South Africa",
+"South Korea","Spain","Sri Lanka","Sudan","Suriname","Sweden",
+"Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand",
+"Togo","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan",
+"Uganda","Ukraine","United Arab Emirates","United Kingdom",
+"United States","Uruguay","Uzbekistan","Venezuela","Vietnam",
+"Yemen","Zambia","Zimbabwe"
+
 ];
 
 function filterCountries(){
