@@ -59,6 +59,8 @@ Choose where you are traveling from to estimate your World Cup travel budget.
 
 <div class="max-w-md mx-auto">
 
+<div class="relative max-w-md mx-auto">
+
 <input
 id="countrySearch"
 type="text"
@@ -66,6 +68,13 @@ placeholder="Search your country..."
 class="w-full border border-gray-300 rounded-xl px-4 py-3 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
 oninput="filterCountries()"
 />
+
+<div
+id="countryResults"
+class="absolute left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-lg max-h-60 overflow-y-auto z-50"
+></div>
+
+</div>
 
 <div
 id="countryResults"
@@ -249,7 +258,6 @@ const item = document.createElement("div");
 item.innerText = country;
 
 item.className = "px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer transition";
-item.onclick = function(){
 
 window.location.href = "country.html?c=" + country;
 
