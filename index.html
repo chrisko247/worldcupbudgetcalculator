@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>World Cup Budget Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+<header class="bg-black text-white p-6">
+<h1 class="text-2xl font-bold text-center">
+World Cup Budget Calculator
+</h1>
+</header>
+
+<div class="max-w-xl mx-auto bg-white p-8 mt-10 shadow-lg rounded">
+
+<h2 class="text-xl font-bold mb-6">Estimate Your World Cup Trip Cost</h2>
+
+<input id="flight" placeholder="Flight Cost ($)" class="border p-2 w-full mb-3">
+
+<input id="hotel" placeholder="Hotel Cost ($)" class="border p-2 w-full mb-3">
+
+<input id="food" placeholder="Food Budget ($)" class="border p-2 w-full mb-3">
+
+<input id="transport" placeholder="Transport ($)" class="border p-2 w-full mb-3">
+
+<input id="tickets" placeholder="Match Tickets ($)" class="border p-2 w-full mb-3">
+
+<button onclick="calculate()" class="bg-black text-white w-full p-3 mt-4">
+Calculate Budget
+</button>
+
+<h3 id="result" class="text-lg font-semibold mt-6"></h3>
+
+</div>
+
+<script>
+
+function calculate(){
+
+let flight = Number(document.getElementById("flight").value);
+let hotel = Number(document.getElementById("hotel").value);
+let food = Number(document.getElementById("food").value);
+let transport = Number(document.getElementById("transport").value);
+let tickets = Number(document.getElementById("tickets").value);
+
+let total = flight + hotel + food + transport + tickets;
+
+document.getElementById("result").innerText =
+"Estimated Total Trip Cost: $" + total;
+
+}
+
+</script>
+
+</body>
+</html>
