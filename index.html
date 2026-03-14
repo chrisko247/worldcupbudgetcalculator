@@ -242,7 +242,7 @@ results.innerHTML = "";
 
 countries.forEach(country => {
 
-if(country.toLowerCase().includes(input)){
+if(country.toLowerCase().startsWith(input)){
 
 const item = document.createElement("div");
 
