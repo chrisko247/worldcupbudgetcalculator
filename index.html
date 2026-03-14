@@ -74,45 +74,22 @@ class="bg-white border border-gray-200 rounded-lg mt-2 shadow-md max-h-60 overfl
 
 </div>
 
-<option value="">Select your country</option>
-<option value="USA">United States</option>
-<option value="UK">United Kingdom</option>
-<option value="Canada">Canada</option>
-<option value="Nigeria">Nigeria</option>
-<option value="Germany">Germany</option>
-<option value="France">France</option>
-<option value="Brazil">Brazil</option>
-<option value="Australia">Australia</option>
-<option value="India">India</option>
--->
+<div class="max-w-md mx-auto">
 
-<option value="Spain">Spain</option>
-<option value="Italy">Italy</option>
-<option value="Argentina">Argentina</option>
-<option value="Mexico">Mexico</option>
-<option value="Netherlands">Netherlands</option>
-<option value="Belgium">Belgium</option>
-<option value="Sweden">Sweden</option>
-<option value="Norway">Norway</option>
-<option value="Denmark">Denmark</option>
-<option value="Switzerland">Switzerland</option>
-<option value="South Africa">South Africa</option>
-<option value="Egypt">Egypt</option>
-<option value="Japan">Japan</option>
-<option value="South Korea">South Korea</option>
-<option value="China">China</option>
-<option value="Indonesia">Indonesia</option>
-<option value="Philippines">Philippines</option>
-<option value="Thailand">Thailand</option>
-<option value="Malaysia">Malaysia</option>
-<option value="Singapore">Singapore</option>
-<option value="Chile">Chile</option>
-<option value="Colombia">Colombia</option>
-<option value="Peru">Peru</option>
-<option value="Venezuela">Venezuela</option>
+<input
+id="countrySearch"
+type="text"
+placeholder="Search your country..."
+class="w-full border border-gray-300 p-4 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
+oninput="filterCountries()"
+/>
 
-</select>
+<div
+id="countryResults"
+class="bg-white border border-gray-200 rounded-lg mt-2 shadow-md max-h-60 overflow-y-auto">
+</div>
 
+</div>
 
 <button onclick="goCountry()" class="bg-black text-white p-3 rounded ml-2">
 Open Guide
