@@ -57,7 +57,15 @@ Select Your Country
 Choose where you are traveling from to estimate your World Cup travel budget.
 </p>
 
-<select id="countrySelect" class="border p-3 rounded w-64">
+<input 
+id="countrySearch"
+type="text"
+placeholder="Search your country..."
+class="border p-3 rounded w-72"
+oninput="filterCountries()"
+/>
+
+<div id="countryResults" class="bg-white border
 
 <option value="">Select your country</option>
 <option value="USA">United States</option>
@@ -211,6 +219,52 @@ const country = document.getElementById("countrySelect").value;
 if(country){
 window.location.href = "country.html?c=" + country;
 }
+
+}
+
+</script> 
+<script>
+
+const countries = [
+"United States","United Kingdom","Canada","Nigeria","Germany","France",
+"Brazil","Australia","India","Spain","Italy","Argentina","Mexico",
+"Netherlands","Belgium","Sweden","Norway","Denmark","Switzerland",
+"South Africa","Egypt","Japan","South Korea","China","Indonesia",
+"Philippines","Thailand","Malaysia","Singapore","Chile","Colombia",
+"Peru","Venezuela","Poland","Portugal","Greece","Turkey",
+"Saudi Arabia","United Arab Emirates","Pakistan","Bangladesh",
+"Vietnam","New Zealand","Ireland","Austria","Hungary",
+"Czech Republic","Romania","Ukraine","Finland","Iceland"
+];
+
+function filterCountries(){
+
+const input = document.getElementById("countrySearch").value.toLowerCase();
+const results = document.getElementById("countryResults");
+
+results.innerHTML = "";
+
+countries.forEach(country => {
+
+if(country.toLowerCase().includes(input)){
+
+const item = document.createElement("div");
+
+item.innerText = country;
+
+item.className = "p-2 hover:bg-gray-100 cursor-pointer";
+
+item.onclick = function(){
+
+window.location.href = "country.html?c=" + country;
+
+};
+
+results.appendChild(item);
+
+}
+
+});
 
 }
 
