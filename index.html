@@ -46,7 +46,37 @@ WorldCupBudgetCalculator
 <section class="text-center py-16 bg-white">
 
 <h2 class="text-4xl font-bold mb-4">
-Plan Your World Cup Travel Budget
+Plan Your World Cup Travel Budget 
+<section class="max-w-3xl mx-auto py-12 text-center">
+
+<h3 class="text-2xl font-bold mb-4">
+Select Your Country
+</h3>
+
+<p class="text-gray-600 mb-6">
+Choose where you are traveling from to estimate your World Cup travel budget.
+</p>
+
+<select id="countrySelect" class="border p-3 rounded w-64">
+
+<option value="">Select your country</option>
+<option value="USA">United States</option>
+<option value="UK">United Kingdom</option>
+<option value="Canada">Canada</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Germany">Germany</option>
+<option value="France">France</option>
+<option value="Brazil">Brazil</option>
+<option value="Australia">Australia</option>
+<option value="India">India</option>
+
+</select>
+
+<button onclick="goCountry()" class="bg-black text-white p-3 rounded ml-2">
+Open Guide
+</button>
+
+</section>
 </h2>
 
 <p class="text-gray-600 max-w-xl mx-auto">
@@ -145,7 +175,19 @@ document.getElementById("result").innerText =
 }
 
 </script>
+<script>
 
+function goCountry(){
+
+const country = document.getElementById("countrySelect").value;
+
+if(country){
+window.location.href = "country.html?c=" + country;
+}
+
+}
+
+</script>
 </body>
 
 </html>
