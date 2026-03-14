@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>World Cup Travel Budget</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+<header class="bg-black text-white p-6 text-center">
+<h1 class="text-2xl font-bold">World Cup Budget Calculator</h1>
+</header>
+
+<section class="max-w-4xl mx-auto py-16 text-center">
+
+<h2 id="title" class="text-3xl font-bold mb-6">
+World Cup Travel Cost
+</h2>
+
+<p id="description" class="text-gray-600 mb-6">
+Planning your trip to the World Cup?
+Use our calculator to estimate your travel cost.
+</p>
+
+<a href="index.html" class="text-blue-600 underline">
+Open the World Cup Budget Calculator
+</a>
+
+</section>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const country = params.get("c");
+
+if(country){
+
+document.getElementById("title").innerText =
+"World Cup Travel Cost from " + country;
+
+document.getElementById("description").innerText =
+"Planning to travel from " + country + " to the World Cup? Use this calculator to estimate your total trip cost including flights, accommodation, food and match tickets.";
+
+}
+
+</script>
+
+</body>
+
+</html>
